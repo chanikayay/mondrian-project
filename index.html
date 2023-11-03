@@ -27,6 +27,7 @@
         margin: 0;
         padding: 0;
         display:flex;
+        flex-direction: column;
         justify-content: center;
         background-color: #fbfbf9;
         position: relative;
@@ -118,9 +119,7 @@
       padding: 5px;
       background-color: #F0F1EC;
       color: #004592;
-      position: absolute;
-  bottom: 0;
-  width: 100%;
+      margin-top: auto;
 
     }
 
@@ -128,13 +127,27 @@
       font-family: 'Roboto Condensed', sans-serif;
     }
 
-    @media (max-width:1300px) {
+    @media (max-width:1200px) {
       .title {
       font-size: 10px;
     }
 
       .description {
       font-size: 18px;
+      }
+
+      .container {
+        width: 374px;
+        height: 374px;
+        gap: 4.5px;
+        display:grid;
+        background-color: #000;
+        grid-template-columns: 160px 99px 76.5px 25px;
+        grid-template-rows: 207px 65px 77.5px 11px;
+      }
+
+      .blue {
+        border-bottom: 5px solid #000;
       }
   }
   </style>
@@ -165,7 +178,7 @@
     <div class="black"></div>
   </div>
 </div>
-
+<br>
 <footer>
   <p><a href="https://www.linkedin.com/in/chanika-moongvicha-38377a12b/">Chanika Moongvicha</a> 2023 © copyright. all rights reserved   
   </p>
