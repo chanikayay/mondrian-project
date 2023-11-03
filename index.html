@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+      body {
+
+        margin: 0;
+        padding: 0;
+        display:flex;
+        justify-content: center;
+        background-color: #fbfbf9;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      .overall {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .container {
+        width: 748px;
+        height: 748px;
+        gap: 9px;
+        display:grid;
+        background-color: #000;
+        grid-template-columns: 320px 198px 153px 50px;
+        grid-template-rows: 414px 130px 155px 22px;
+      }
+
+        .text{
+          padding: 10px 10px;
+        }
+
+        .text > * {
+          color: #232629;
+          font-size: 20px;
+          text-align: center;
+          display:flex;
+          justify-content: center;
+        }
+
+        .title {
+          padding-top: 20px;
+        }
+
+      .red {
+        background-color: #E72F24;
+
+        grid-area: 0 / 2 / 0 / 2;
+
+      }
+      
+      .white {
+        background-color: #F0F1EC;
+
+      }
+
+      .big {
+        grid-column: span 3
+      }
+
+      .small {
+        grid-area: 2 / 1 / 4 / 2;
+      }
+
+      .medium {
+        grid-area: 2 / 2 / 4 / 4;
+      }
+
+      .long {
+        grid-column: span 1;
+      }
+
+      .rectangle {
+        border-top: 1px solid #000;
+        grid-row: span 2;
+      }
+
+      .blue {
+        background-color: #004592;
+        grid-area: 2 / 4 / 3 / -1;
+        border-bottom: 10px solid #000;
+      }
+
+      .yellow {
+        background-color: #F9D01E;
+
+      }
+
+      .black { 
+        background-color: #232629;
+        grid-area: span 1;
+      }
+    footer {
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+      background-color: #F0F1EC;
+      color: #004592;
+      position: absolute;
+  bottom: 0;
+  width: 100%;
+
+    }
+
+    * {
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    @media (max-width:1300px) {
+      .title {
+      font-size: 10px;
+    }
+
+      .description {
+      font-size: 18px;
+      }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+<div class="overall">
+  <div class="text">
+    <div class="title">
+      <h1>Composition C (No.III) with Red, Yellow and Blue <br> by Piet Mondrian in 1935
+      </h1> 
+    </div>
+    <div class="description">
+      <p>Recreated using HTML and CSS (Grid) </p>
+    </div>
+  </div>
+  <hr>
+  <div class="container">
+    <div class="red"></div>
+    <div class="white big"></div>
+    <div class="white small"></div>
+    <div class="white medium"></div>
+    <div class="blue"></div>
+    <div class="white rectangle"></div>
+    <div class="white long"></div>
+    <div class="yellow"></div>
+    <div class="black"></div>
+  </div>
+</div>
+
+<footer>
+  <p><a href="https://www.linkedin.com/in/chanika-moongvicha-38377a12b/">Chanika Moongvicha</a> 2023 © copyright. all rights reserved   
+  </p>
+  
+</footer>
+</body>
+
+</html>
